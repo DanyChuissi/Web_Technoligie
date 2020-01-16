@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktikum 7</title>
+    <link rel="stylesheet" type="text/css"
+          href="myStyle.css">
+    <link rel="stylesheet" type="text/css"
+          href="flexbox.css">
+</head>
+<body>
+<div id="hauptContainer">
+    <header>
+        <img src="../Bilder/seminare_logo.jpg" alt="Das Logo sollte hier stehen">
+        <h1>Seminare Informationen</h1>
+    </header>
+    <nav>
+        <div id="navContainer">
+            <a href="praktikum7.html">Seminare Liste</a>
+            <a href="Detail_Seminar1.html">Seminare 1 (Beispiel)</a>
+            <a href="detaill_SeminarLeiter3.html">Seminare 1 Detail (Beispeil)</a>
+            <a href="New_Seminar.html"> Seminar anlegen</a>
+        </div>
+    </nav>
+    <div id="centerContainer">
+        <main>
+            <div id="mainContainer">
+                <div>
+                    <form action="https://labs.inf.fh-dortmund.de/seminarApp/testSearch.php" method="GET">
+                        <label for="semtitle">Seminartitel:</label>
+                        <span class="required"> <input list="seminarliste" type="text" id="semtitle" name="semtitle"
+                                                       required
+                                                       maxlength="20" pattern="[A-Z][a-zA-Z]*"></span>
+                        <br>
+                        <datalist id="seminarliste">
+                            <option value="Präsentation Technicken">
+                            <option value="Börseseminar">
+                            <option value="Informatik & Geselschaft">
+                        </datalist>
+                        <button type="submit">Finden</button>
+                    </form>
+                </div>
+                <div>
+                    <h3>Liste Alle Seminate</h3>
+                    <table id="semTable">
+                        <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Veranstaltungsdatum</th>
+                            <th>Veranstaltungsort</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="Detail_Seminar1.html"> Präsentation Technicken</a></td>
+                            <td>Do. 14:15- 15:50</td>
+                            <td>A3.03</td>
+                        </tr>
+                        <tr>
+                            <td><a href="Detail_Seminar2.html"> Börseseminar</a></td>
+                            <td>Mi. 14:15- 15:50</td>
+                            <td>AE.01</td>
+                        </tr>
+                        <tr>
+                            <td><a href="Detail_Seminar3.html"> Informatik & Geselschaft</a></td>
+                            <td> Mo. 14:15- 15:50</td>
+                            <td>A2.23</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <aside>
+
+            <h4>
+                Aktuelle Meldungen
+            </h4>
+            <ul>
+                <li> Raumverlegung: 24-04-2019, Der Seminar 1 finden heute im Raum AE-3.34</li>
+                <li> Seminar Ausfall: 05-05-2019, Der Seminar 3 fällt heute aus</li>
+                <li> Seminar Anmeldung: 01-04-2019, Die Anmeldung Frist für alle seminare ist am 30-04-2019</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <em>Copyrigth</em>
+    </footer>
+</div>
+</body>
+</html>

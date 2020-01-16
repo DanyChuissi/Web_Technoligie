@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seminar Liste</title>
+    <link rel="stylesheet" type="text/css"
+          href="css/myStyle.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/flexbox.css">
+</head>
+<body>
+<div id="hauptContainer">
+    <%- include("includes/header.ejs") %>
+    <nav>
+        <%- include("includes/navigation.ejs") %>
+    </nav>
+    <div id="centerContainer">
+        <main>
+            <div id="mainContainer">
+                <div>
+                    <form action="https://labs.inf.fh-dortmund.de/seminarApp/testSearch.php" method="GET">
+                        <label for="semtitle">Seminartitel:</label>
+                        <span class="required"> <input list="seminarliste" type="text" id="semtitle" name="semtitle"
+                                                       required
+                                                       maxlength="20" pattern="[A-Z][a-zA-Z]*"></span>
+                        <br>
+                       <datalist id="seminarliste">
+                            <% for (medium of medien) { %>
+                                <option value=<%= medium.titel %> >
+                            <% } %>
+                        </datalist>
+                        <button type="submit">Finden</button>
+                    </form>
+                </div>
+                <div>
+                    <h3>Liste Alle Seminate</h3>
+                    <table id="semTable">
+                        <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Veranstaltungsdatum</th>
+                            <th>Veranstaltungsort</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% for (var i = 0 ; i < medien.length; i++) { %>
+                         <tr>
+                            <td><a href= <%= "Detail_Medium/" +medien[i].id+ "/"+medien[i].type %>  > <%= medien[i].titel%></a></td>
+                            <td> <%= medien[i].medienNummer %> </td>
+                            <td> <%=medien[i].jahr%>  </td>
+                        </tr>
+                        <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <aside>
+
+            <h4>
+                Aktuelle Meldungen
+            </h4>
+            <ul>
+                <li> Raumverlegung: 24-04-2019, Der Seminar 1 finden heute im Raum AE-3.34</li>
+                <li> Seminar Ausfall: 05-05-2019, Der Seminar 3 fällt heute aus</li>
+                <li> Seminar Anmeldung: 01-04-2019, Die Anmeldung Frist für alle seminare ist am 30-04-2019</li>
+            </ul>
+        </aside>
+    </div>
+    <%- include("includes/footer.ejs") %>
+</div>
+</body>
+</html>

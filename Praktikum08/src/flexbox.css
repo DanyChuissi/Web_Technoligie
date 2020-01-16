@@ -1,0 +1,16 @@
+#hauptContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#centerContainer {
+    display: flex;
+}
+aside {
+    width: 20em;
+}

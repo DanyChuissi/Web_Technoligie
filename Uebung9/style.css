@@ -1,0 +1,36 @@
+h1 { font-family: cursive; }
+main { display: flex; }
+#bild {
+    float: right;
+    width: 20%;
+    height: auto;
+    margin: 10px;
+}
+nav {
+    border-right: 1px solid;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+nav a { display: block; }
+footer { text-align: center; }
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid;
+    }
+
+    nav a {
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #bild {
+        display: none;
+    }
+}

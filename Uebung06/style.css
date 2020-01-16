@@ -1,0 +1,20 @@
+table tr th {
+    color: red;
+}
+
+table tr:nth-child(2), table tr:last-child  {
+    background-color: lightblue;
+}
+
+
+section h2 {
+    color: orange;
+}
+
+P ~ P{
+    background-color: yellow;
+}
+
+section + p, p+p {
+    background-color: yellow;
+}

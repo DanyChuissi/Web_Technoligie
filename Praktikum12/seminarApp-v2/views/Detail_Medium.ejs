@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=medium.titel%></title>
+    <link rel="stylesheet" type="text/css"
+          href="../../css/myStyle.css">
+    <link rel="stylesheet" type="text/css"
+          href="../../css/flexbox.css">
+</head>
+<body>
+<header>
+    <a href="../"><img src="../../img/seminare_logo.jpg" alt="Das Logo sollte hier stehen"></a>
+    <h1>Seminare Informationen</h1>
+</header>
+<nav>
+    <div id="navContainer">
+        <a href="../../seminarliste">Seminare Liste</a>
+        <a href="../../Medienliste">Medien Liste</a>
+        <a href="../../Detail_Seminar1">Detail Seminar</a>
+        <a href="../../detaill_SeminarLeiter1">Detail Seminatleiter</a>
+        <a href="../../New_Seminar"> Seminar anlegen</a>
+        <a href="../../New_Medium"> Medium anlegen</a>
+    </div>
+</nav>
+<div id="centerContainer">
+    <main>
+        <div id="mainContainer">
+            <section>
+                <h2>Informationen zum Medium (<%=medium.type%>) <%=medium.titel%>:</h2>
+                <ul>
+                    <li><strong>Titel: </strong> <%= medium.titel%></li>
+                    <li><strong>Name des Interpreter: </strong> <%= medium.interpreter%></li>
+                    <li><strong>Jahr: </strong><%= medium.jahr%></li>
+                    <li><strong>Ort: </strong> <%=medium.ort%></li>
+                    <li><strong>Dauer: </strong> <%= medium.dauer%></li>
+                    <li><strong>Mediennummer: </strong> <%= medium.medienNummer%></li>
+                    <li><strong>Erstellt am: </strong> <%=medium.createdAt%></li>
+                    <li><strong>Letzte Änderung am: </strong> <%=medium.updatedAt%></li>
+                </ul>
+            </section>
+            <form action=<%= "mediengeloecht/" +medium.id +"/"+ medium.type %>>
+                <button type="submit">Diesde Medium Loeschen</button>
+            </form>
+
+        </div>
+
+    </main>
+    <aside>
+        <%- include("includes/aside.ejs") %>
+    </aside>
+</div>
+<%- include("includes/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,30 @@
+#gridSemLeiter {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 20% 10% auto 10%;
+    grid-template-areas:    "area1 area1"
+                            "area2 area2"
+                            "area4 area3"
+                            "area5 area5";
+}
+
+#item1 {grid-area: area1; }
+#item2 {grid-area: area2; }
+#item3 {grid-area: area3; }
+#item4 {grid-area: area4; }
+#item5 {grid-area: area5; }
+
+
+/*Detailseite zum Seminarleiter: Insbesondere soll das Bild des Seminarleiters flexibel sein (d.h. fluide
+                                                                                            mitwachsen bzw. mitschrumpfen).*/
+@media screen and (max-width: 768px){
+    #gridSemLeiter {
+
+        grid-template-areas:
+                "area1 area1"
+                "area2 area2"
+                "area4 area4"
+                "area3 area3"
+                "area5 area5";
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seminar Erstellen</title>
+</head>
+<body>
+    <header>
+        <h1>Details zum Seminar eingeben</h1>
+        <link rel="stylesheet" type="text/css"
+              href="myStyle.css">
+
+    </header>
+
+    <main>
+        <form action="https://labs.inf.fh-dortmund.de/seminarApp/testCreateSeminar.php" method="POST">
+            <fieldset>
+                <legend>Allegeine Infos zur Seminar</legend>
+                <label for="semtitle">Seminartitel:</label>
+               <span class="required"> <input id="semtitle" name="semtitle" required autofocus placeholder="Titel Eingeben" maxlength="20" pattern="[A-Z][a-zA-Z]*"></span> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Seminar Leiter und Turoren</legend>
+                <label for="semlead">SeminarleiterIn:</label>
+                <select id="semlead" name="semlead">
+                    <option value="Paul Mueller">Paul Mueller</option>
+                    <option value="Jean Du Jardin">Jean Du Jardin</option>
+                    <option value="Maria Simpson"> Maria Simpson</option>
+                    <option value="Dany Martin"> Dany Martin</option>
+                </select><br>
+
+                <label for="semtutors">Tutoren</label>
+                <input id="semtutors" name="semtutors" pattern="([a-z]{2,4}[0-9],)*([a-z]{2,4}[0-9])+"><br>
+
+            </fieldset>
+            <fieldset>
+                <legend>Datum und Uhrzeit</legend>
+                <label for="semdate">Datum:</label>
+                <input id="semdate" name="semdate" type="date"><br>
+
+                <label for="semstart,">Startzeit:</label>
+                <input id="semstart," name="semstart" type="time" min="08:00" max="16:00"><br>
+                <label for="semend">Endezeit:</label>
+                <input id="semend" name="semend" type="time" max="18:00"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Plätze</legend>
+                <label for="semseats">Anzahl verfügbarer Plätze:</label>
+                <input id="semseats" name="semseats" type="number" min="0" max="100"><br>
+            </fieldset>
+            <button type="submit">Speichern</button>
+        </form>
+    </main>
+</body>
+</html>

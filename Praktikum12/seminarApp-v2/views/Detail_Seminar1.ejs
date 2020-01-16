@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=seminar.titel%></title>
+    <link rel="stylesheet" type="text/css"
+          href="css/myStyle.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/flexbox.css">
+</head>
+<body>
+<%- include("includes/header.ejs") %>
+<nav>
+    <%- include("includes/navigation.ejs") %>
+</nav>
+<div id="centerContainer">
+    <main>
+        <div id="mainContainer">
+            <section>
+                <h2>Informationen zum Seminar <%=seminar.titel%>:</h2>
+                <ul>
+                    <li><strong>Titel: </strong> <%= seminar.titel%></li>
+                    <li><strong>Name des Seminarleiters: </strong> <a href="detaill_SeminarLeiter1"><%= seminar.name%></a>
+                    </li>
+                    <li><strong>Veranstaltungsdatum: </strong><%= seminar.startzeit.toLocaleDateString()%></li>
+                    <li><strong>Uhrzeit (Start und Ende): </strong> <%=seminar.startTime%> - <%=seminar.endTime%></li>
+                    <li><strong>Anzahl freier Plätze: </strong> <%= seminar.fPlaetze%></li>
+                    <li><strong>Anzahl insgesamt verfügbarer Plätze: </strong> <%=seminar.vPlaetze%></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Beschreibung des Seminars:</h2>
+                Durch die Integration von Fernwirk-, Schutz- und Leittech- nikfunktionen ändern sich sowohl technische
+                Systemstruk-
+                turen der Stationsleittechnik als auch Prozessabläufe und Zuständigkeiten bei Herstellern und
+                Betreibern. Für multi-
+                funktionale Einzelkomponenten werden standardisierte Kommunikationsschnittstellen gefordert, deren
+                Nutzung über moderne
+                Netzwerktechnologien erfolgen soll. Diese Entwicklung wird durch den Übergang von der signalorien-
+                tierten Sichtweise der
+                Kommunikationsnorm IEC 60870 zur abstrakten Informationsmodellierung des Systemstandards IEC 61850
+                symbolisiert. Anwender
+                stehen dadurch bei Projekten oft im Spannungsfeld unterschiedlicher Innovati- onsraten von Primär- und
+                Sekundärtechnik.
+                Das Seminar gibt einen Überblick zur Einordnung und Bewertung des Systemprodukts „Stationsleittechnik“
+                aus Anwendersicht.
+                Zielsetzung ist die Vermittlung von Basis- und ausge- wähltem Spezialwissen ergänzt durch
+                Erfahrungsbeispiele, um aktuelle
+                Entwicklungen einschätzen zu können.
+                Durch die Integration von Fernwirk-, Schutz- und Leittech- nikfunktionen ändern sich sowohl technische
+                Systemstruk-
+                turen der Stationsleittechnik als auch Prozessabläufe und Zuständigkeiten bei Herstellern und
+                Betreibern. Für multi-
+                funktionale Einzelkomponenten werden standardisierte Kommunikationsschnittstellen gefordert, deren
+                Nutzung über moderne
+                Netzwerktechnologien erfolgen soll. Diese Entwicklung wird durch den Übergang von der signalorien-
+                tierten Sichtweise der
+                Kommunikationsnorm IEC 60870 zur abstrakten Informationsmodellierung des Systemstandards IEC 61850
+                symbolisiert. Anwender
+                stehen dadurch bei Projekten oft im Spannungsfeld unterschiedlicher Innovati- onsraten von Primär- und
+                Sekundärtechnik.
+                Das Seminar gibt einen Überblick zur Einordnung und Bewertung des Systemprodukts „Stationsleittechnik“
+                aus Anwendersicht.
+                Zielsetzung ist die Vermittlung von Basis- und ausge- wähltem Spezialwissen ergänzt durch
+                Erfahrungsbeispiele, um aktuelle
+                Entwicklungen einschätzen zu können.
+                Durch die Integration von Fernwirk-, Schutz- und Leittech- nikfunktionen ändern sich sowohl technische
+                Systemstruk-
+                turen der Stationsleittechnik als auch Prozessabläufe und Zuständigkeiten bei Herstellern und
+                Betreibern. Für multi-
+                funktionale Einzelkomponenten werden standardisierte Kommunikationsschnittstellen gefordert, deren
+                Nutzung über moderne
+                Netzwerktechnologien erfolgen soll. Diese Entwicklung wird durch den Übergang von der signalorien-
+                tierten Sichtweise der
+                Kommunikationsnorm IEC 60870 zur abstrakten Informationsmodellierung des Systemstandards IEC 61850
+                symbolisiert. Anwender
+                stehen dadurch bei Projekten oft im Spannungsfeld unterschiedlicher Innovati- onsraten von Primär- und
+                Sekundärtechnik.
+                Das Seminar gibt einen Überblick zur Einordnung und Bewertung des Systemprodukts „Stationsleittechnik“
+                aus Anwendersicht.
+                Zielsetzung ist die Vermittlung von Basis- und ausge- wähltem Spezialwissen ergänzt durch
+                Erfahrungsbeispiele, um aktuelle
+                Entwicklungen einschätzen zu können.
+                Durch die Integration von Fernwirk-, Schutz- und Leittech- nikfunktionen ändern sich sowohl technische
+                Systemstruk-
+                turen der Stationsleittechnik als auch Prozessabläufe und Zuständigkeiten bei Herstellern und
+                Betreibern. Für multi-
+                funktionale Einzelkomponenten werden standardisierte Kommunikationsschnittstellen gefordert, deren
+                Nutzung über moderne
+                Netzwerktechnologien erfolgen soll. Diese Entwicklung wird durch den Übergang von der signalorien-
+                tierten Sichtweise der
+                Kommunikationsnorm IEC 60870 zur abstrakten Informationsmodellierung des Systemstandards IEC 61850
+                symbolisiert. Anwender
+                stehen dadurch bei Projekten oft im Spannungsfeld unterschiedlicher Innovati- onsraten von Primär- und
+                Sekundärtechnik.
+                Das Seminar gibt einen Überblick zur Einordnung und Bewertung des Systemprodukts „Stationsleittechnik“
+                aus Anwendersicht.
+                Zielsetzung ist die Vermittlung von Basis- und ausge- wähltem Spezialwissen ergänzt durch
+                Erfahrungsbeispiele, um aktuelle
+                Entwicklungen einschätzen zu können.
+            </section>
+        </div>
+
+    </main>
+    <aside>
+        <%- include("includes/aside.ejs") %>
+    </aside>
+</div>
+<%- include("includes/footer.ejs") %>
+</body>
+</html>

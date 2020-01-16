@@ -1,0 +1,9 @@
+* {
+    font-family: Arial sans-serif;
+}
+body article.art {
+    border: 5px solid black;
+}
+body > h1  {
+    color:  orange !important;
+}

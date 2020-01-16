@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details zum Seminar <%= seminar.titel%></title>
+    <link rel="stylesheet" type="text/css"
+          href="css/myStyle.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/grid.css">
+</head>
+<body id="gridSemLeiter">
+<div id="item1">
+    <%- include("includes/header.ejs") %>
+</div>
+<nav id="item2">
+    <%- include("includes/navigation.ejs") %>
+</nav>
+    <aside id="item3">
+        <%- include("includes/aside.ejs") %>
+    </aside>
+    <main id="item4">
+        <h2>Informationen zum Seminarleiter <%= seminar.name%>:</h2>
+        <figure id="pics">
+            <img src="img/foto_person1.jpg" alt="Das Foto steht hier">
+            <figcaption>
+                Prof <%= seminar.name%>
+            </figcaption>
+        </figure>
+
+        <ul>
+            <li><strong>Name (Vorname und Nachname): </strong> <%= seminar.name%></li>
+            <li><strong>E-Mail-Adresse: </strong> <a href="mailto:name1@web.de"> <%= seminar.name%>@web.de</a></li>
+            <li><strong>Telefonnummer: </strong> <a href="tel:012345678"> 0123 234343434 </a></li>
+        </ul>
+    </main>
+<div id="item5">
+    <%- include("includes/footer.ejs") %>
+</div>
+</body>
+</html>

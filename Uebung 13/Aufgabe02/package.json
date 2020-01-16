@@ -1,0 +1,12 @@
+{
+  "name": "aufgabe02",
+  "version": "1.0.0",
+  "description": "Uebung 13 Beispiel Seite mit Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Dany Chuissi",
+  "license": "MIT"
+}

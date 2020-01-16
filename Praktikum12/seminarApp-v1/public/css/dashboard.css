@@ -1,0 +1,61 @@
+#dashBody {
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    border: 3px solid white;
+    background-color: orange;
+}
+
+header {
+    padding: 1em;
+}
+
+#dashMain a{
+    width: 15em;
+    height: 15em;
+    background-color: darkorange;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    border: 1px solid black;
+    /*margin: 2em;*/
+   line-height: 15em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#dashMain {
+    height: 60%;
+    display: flex;
+   /* justify-content: center;*/
+    align-content: space-evenly;
+  /*  padding: 10em;*/
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+
+#dashFooter {
+    position: relative; !important;
+    height: 2em;
+}
+
+@media screen  and (max-width: 768px){
+    #dashMain a{
+        width: 11em;
+        height: 11em;
+        font-size: 14px;
+    }
+}
+
+@media screen  and (max-width: 480px){
+    #dashMain a{
+        width: 9em;
+        height: 9em;
+        font-size: 12px;
+    }
+}

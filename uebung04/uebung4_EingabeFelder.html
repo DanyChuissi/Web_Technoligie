@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eingabe Felder</title>
+</head>
+<body>
+    <FORM>
+        <fieldset>
+            <legend>Angaben</legend>  <!--Titel der Angabe felder-->
+            <label for="email">E-Mail</label>
+            <input id="email" name="mailAddr" required> <br>
+            <p>
+                <label for="topics">Themen</label>
+                <select id="topics" multiple required name="topics">
+                    <option value="geocaching">Geocaching</option>
+                    <option value="bouldern" selected>Bouldern"</option>
+                    <option value="stacking">Sport Stacking</option>
+                </select>
+            </p> <br>
+        </fieldset>
+        <p>
+            <input type="radio" name="wahl1" value="Abo" checked>Abonnieren"
+            <input type="radio" name="wahl2" value="abb">Abbestellen
+        </p>
+
+        <button type="submit">Daten Absenden</button>
+    </FORM>
+</body>
+</html>

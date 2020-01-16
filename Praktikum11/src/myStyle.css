@@ -1,0 +1,161 @@
+*{
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+header {
+    color: darkorange;
+}
+
+input:required {
+    background-color: gainsboro;
+    border: 2px solid red;
+}
+
+span.required::after{
+    content: "   (erforderliche Eingabe)";
+    color: darkgray;
+}
+input:invalid {
+    color: red;
+}
+input:valid {
+    color: forestgreen;
+    border: 2px solid green;
+}
+aside {
+    background-color: darkkhaki;
+}
+
+nav a[href]:hover {
+    color: green;
+}
+
+#semTable  thead {
+    background-color: cadetblue;
+}
+
+#semTable th {
+    width: 40em;
+}
+
+#semTable tbody tr:nth-child(odd){
+    background-color: lightskyblue;
+
+}
+#semTable tbody tr:nth-child(even){
+    background-color: dodgerblue;
+
+
+}
+
+[href^="mailto"]::before {
+    content: url("../Bilder/email.png");
+    background-size: 10px 20px;
+    width: 10px;
+    height: 20px;
+}
+
+/* Praktikum 6   */
+
+aside {
+    padding: 3px;
+    margin: 2px;
+    border: 2px dotted;
+}
+
+fieldset legend {
+    border: 1px solid black;
+    border-radius: 10px;
+    font-style: italic;
+    background-color: blue;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+header h1 {
+    text-shadow: 3px 3px 1px darkgray ;
+    letter-spacing: 0.3em;
+    padding-left: 300px;
+}
+
+section {
+    border-left: 2px solid gray;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+/* Praktikum 7   */
+
+#navContainer {
+    display: flex;
+}
+#navContainer a {
+    margin: 10px;
+    text-decoration: none;
+}
+
+#pics {
+    float: right;
+}
+footer {
+    clear: left;
+    position: sticky;
+    bottom: 20px;
+}
+header img {
+    float: left;
+}
+/*body  nav body main{
+    clear: left;
+}*/
+#navContainer {
+    clear: left;
+}
+/*main {
+    position: sticky;
+    overflow: scroll;
+}
+body {
+    position: relative;
+}*/
+
+/* Praktikum 10   */
+
+/* Responsive Bild  */
+/*Detailseite zum Seminarleiter: Insbesondere soll das Bild des Seminarleiters flexibel sein (d.h. fluide
+                                                                                            mitwachsen bzw. mitschrumpfen).*/
+#pics img  {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+Detailseite zum Seminarleiter: Bei einer Viewport-Breite ≤ 480 Pixel soll das Bild des Seminarleiters
+                                                               unter den Informationen zum Seminarleiter angezeigt werden (siehe folgende Abbildungen).
+*/
+
+@media screen and (max-width: 480px) {
+    #pics {
+        float: none;
+    }
+    #item4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+  /*  bei einer Viewport-Breite ≤ 480 Pixel der Titel der Web-Anwendung nicht mehr dargestellt werden.*/
+    header h1 {
+        display: none;
+    }
+
+}
+
+/*bei einer Viewport-Breite ≤ 768 Pixel die Schriftgröße des Titels der Web-Anwendung kleiner
+                                werden,*/
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+

@@ -1,0 +1,58 @@
+* {
+    font-family: Arial, serif;
+}
+
+header {
+   /* Prak5 Auf 1*/
+    color: darkorange;
+}
+
+input:required {
+    background-color: gainsboro;
+}
+
+span.required::after{
+    /* Prak5 Auf 3 - 1*/
+    content: "(erforderliche Eingabe)";
+    color: darkgray;
+}
+input:invalid {
+   /* color: red;*/
+    background-color: red;
+}
+input:valid {
+    /*color: forestgreen;*/
+    background-color: forestgreen;
+}
+
+
+aside {
+    background-color: darkkhaki;
+}
+
+nav a[href]:hover {
+    /* Prak5 Auf 3 - 2*/
+    color: green;
+}
+
+/* Prak5 Auf 3 - 4*/
+#semTable  thead {
+    background-color: cadetblue;
+}
+
+#semTable tbody tr:nth-child(odd){
+    background-color: lightskyblue;
+
+}
+#semTable tbody tr:nth-child(even){
+    background-color: dodgerblue;
+
+}
+
+[href^="mailto"]::before {
+    content: url("../Bilder/email.png");
+    background-size: 10px 20px;
+    width: 10px;
+    height: 20px;
+}
+

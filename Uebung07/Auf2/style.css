@@ -1,0 +1,15 @@
+/* Regel 1 */
+p[class] {
+    border: 2px solid red;
+    font-style: italic;
+}
+/* Regel 2 */
+#einleitung p[class] { color: blue; }
+/* Regel 3 */
+section#einleitung p.hinweis {
+    color: orange;
+}
+/* Regel 4 */
+*[id] h2 { color: gold; }
+/* Regel 5 */
+section > h2 { color: red; }
